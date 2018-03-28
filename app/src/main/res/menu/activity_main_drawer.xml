@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <group
+
+        android:checkableBehavior="single">
+
+        <item
+            android:checked="true"
+            android:id="@+id/nav_notes"
+            android:orderInCategory="1"
+            android:icon="@drawable/notemenu"
+            android:title="@string/notes_menu" />
+
+
+        <item
+            android:id="@+id/nav_archive"
+            android:orderInCategory="2"
+            android:icon="@drawable/archive_menu"
+            android:title="@string/archive_menu" >
+        </item>
+
+        <item
+            android:visible="false"
+            android:checkable="false"
+            android:id="@+id/nav_settin"
+            android:orderInCategory="3"
+            android:icon="@drawable/settings"
+            android:title="@string/settings_menu" >
+        </item>
+
+
+        <item
+            android:id="@+id/group_menu_id"
+            android:orderInCategory="5"
+            android:title="@string/nav_tag">
+            <menu  android:checkableBehavior="none">
+                <item
+                    android:id="@+id/nav_add"
+                    android:title="@string/add_tag"
+                    android:orderInCategory="3"
+                    android:icon="@drawable/edit_tag"
+                     >
+                </item>
+            </menu>
+        </item>
+    </group>
+
+    <!--<item android:title="Communicate">-->
+        <!--<menu>-->
+            <!--<item-->
+                <!--android:id="@+id/nav_share"-->
+                <!--android:icon="@drawable/ic_menu_share"-->
+                <!--android:title="Share" />-->
+            <!--<item-->
+                <!--android:id="@+id/nav_send"-->
+                <!--android:icon="@drawable/ic_menu_send"-->
+                <!--android:title="Send" />-->
+        <!--</menu>-->
+    <!--</item>-->
+
+</menu>

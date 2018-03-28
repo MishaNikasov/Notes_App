@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/editContent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="beforeDescendants"
+    android:focusableInTouchMode="true"
+    tools:context="donnu.nikasov.notes.Activity.EditNoteActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:paddingBottom="40dp"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/tagEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tag" />
+
+        <EditText
+            android:textColor="@color/primaryColor"
+            android:descendantFocusability="beforeDescendants"
+            android:focusableInTouchMode="true"
+            android:id="@+id/editTitle"
+            android:textSize="20sp"
+            android:layout_margin="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textCapSentences"
+            android:hint="@string/titleEdit"
+            android:textColorHint="@color/hintTextDark"
+            android:background="@android:color/transparent" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/softGray"/>
+        <EditText
+            android:layout_margin="20dp"
+            android:id="@+id/editDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/hintText"
+            android:ems="10"
+            android:inputType="textCapSentences|textMultiLine"
+            android:background="@android:color/transparent"
+            android:hint="@string/descEdit" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:background="@android:color/white"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/softGray"/>
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/ic_menu_add"
+            android:id="@+id/buttonMore"
+            android:layout_centerVertical="true"
+
+            android:visibility="gone"
+            android:background="?android:selectableItemBackground"
+            android:clickable="true"
+            android:foreground="?selectableItemBackground"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="20dp"
+            android:contentDescription="Меню" />
+
+        <ImageButton
+            android:padding="10dp"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/mark"
+            android:id="@+id/buttonTag"
+            android:layout_centerVertical="true"
+            android:background="?android:selectableItemBackground"
+            android:clickable="true"
+            android:foreground="?selectableItemBackground"
+            android:layout_alignParentStart="true"
+            android:contentDescription="Теги" />
+        <ImageButton
+            android:padding="10dp"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/color"
+            android:id="@+id/buttonColor"
+            android:layout_centerVertical="true"
+            android:background="?android:selectableItemBackground"
+            android:clickable="true"
+            android:foreground="?selectableItemBackground"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="40dp"
+            android:contentDescription="Теги" />
+        <ImageButton
+            android:visibility="gone"
+            android:padding="10dp"
+            android:layout_alignParentEnd="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/bell"
+            android:id="@+id/buttonAlert"
+            android:layout_centerVertical="true"
+            android:background="?android:selectableItemBackground"
+            android:clickable="true"
+            android:foreground="?selectableItemBackground"
+            android:layout_marginEnd="40dp"
+            android:contentDescription="Теги" />
+
+        <TextView
+            android:id="@+id/dataEditNote"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="center_horizontal"
+            android:text="Дата" />
+
+        <ImageButton
+            android:padding="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?android:selectableItemBackground"
+            android:clickable="true"
+            android:src="@drawable/save"
+            android:contentDescription="Сохранить"
+            android:id="@+id/okEditButton"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+
+</RelativeLayout>

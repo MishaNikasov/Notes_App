@@ -1,0 +1,70 @@
+<android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:card="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/notesCardItem"
+    android:layout_height="wrap_content"
+
+    android:background="?android:selectableItemBackground"
+    android:clickable="true"
+
+    android:layout_marginLeft="2dp"
+    android:layout_marginRight="2dp"
+    android:foreground="?selectableItemBackground"
+    card_view:cardBackgroundColor="@color/primaryColor"
+    card:cardCornerRadius="5dp"
+    card:cardElevation="2dp"
+    card:cardUseCompatPadding="true">
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/card_content"
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:id="@+id/tagText"
+                android:text="ID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                card_view:layout_constraintTop_toTopOf="parent"
+                card_view:layout_constraintBottom_toBottomOf="parent"
+                card_view:layout_constraintRight_toRightOf="parent"
+                card_view:layout_constraintHorizontal_bias="1.0"
+                card_view:layout_constraintVertical_bias="0.0"
+                card_view:layout_constraintLeft_toRightOf="@+id/mainText"
+                android:layout_marginLeft="8dp" />
+            <TextView
+                android:textColor="@color/white"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:id="@+id/mainText"
+                android:layout_width="300dp"
+                android:textSize="21sp"
+                android:layout_height="20dp"
+                android:text="Оглавление"
+                card_view:layout_constraintTop_toTopOf="parent"
+                tools:layout_editor_absoluteX="2dp"
+                card_view:layout_constraintBottom_toBottomOf="parent"
+                card_view:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:textColor="@color/white"
+                android:ellipsize="end"
+                android:maxLines="10"
+                android:textSize="17sp"
+                android:id="@+id/describeText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Описание"
+                card_view:layout_constraintTop_toTopOf="parent"
+                tools:layout_editor_absoluteX="2dp"
+                android:layout_marginTop="23dp" />
+        </android.support.constraint.ConstraintLayout>
+
+
+
+</android.support.v7.widget.CardView>
